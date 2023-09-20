@@ -11,6 +11,7 @@
 <body>
 <div class="container">
   <h1 th:text="${post.title}"></h1>
+  <h3 th:text="'Written by ' + ${post.account.name}"></h3>
   <hr />
   <div class="posts-container">
     <p th:text="${post.body}"></p>

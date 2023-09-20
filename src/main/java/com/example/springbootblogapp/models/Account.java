@@ -1,9 +1,8 @@
 package com.example.springbootblogapp.models;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -24,5 +23,7 @@ public class Account {
     private String password;
 
     @OneToMany(mappedBy = "account")
+    @Nullable
     private List<Post> posts;
+
 }
